@@ -1,0 +1,58 @@
+# class>motor
+# object> surat2, kondisi_mesin, model, harga, CC, warna
+# nama : Hafzan Wazani (24241168)
+
+class SepedaMotor:
+    def __init__(self, surat2, kondisi_mesin, merk, model, harga, cc, warna):
+        # INI ADALAH DEFINISI INSTANCE VARIABLE
+        self.surat2 = surat2
+        self.kondisi_mesin = kondisi_mesin
+        self.merk = merk
+        self.model = model
+        self.harga = harga
+        self.cc = cc
+        self.warna = warna
+
+    def tampilkan_info(self):
+        # INSTANCE VARIABLE DIPANGGIL MENGGUNAKAN 'self.'
+        print("="*30)
+        print("=== Info Sepeda Motor ===")
+        print("="*30)
+        print(f"Merk           : {self.merk}")
+        print(f"Model          : {self.model}")
+        print(f"Warna          : {self.warna}")
+        print(f"Kapasitas Mesin: {self.cc} cc")
+        # Menggunakan .0f untuk menghilangkan desimal pada harga
+        print(f"Harga          : Rp{self.harga:,.0f}")
+        print(f"Kondisi Mesin  : {self.kondisi_mesin}")
+        print(f"Surat-surat    : {self.surat2}")
+        print("="*30)
+        print()
+        
+# --- PENGGUNAAN: Membuat Dua Objek dengan Instance Variable yang Berbeda ---
+
+# Objek 1: motor1 (Data unik untuk scoopy)
+motor1 = SepedaMotor(
+    surat2="Lengkap (STNK & BPKB)",
+    kondisi_mesin="Baik",
+    merk="Honda",
+    model="scoopy",
+    harga=2000000,
+    cc=125,
+    warna="hitam"
+)
+
+# Objek 2: motor2 (Data unik untuk NMAX)
+motor2 = SepedaMotor(
+    surat2="Lengkap (STNK, BPKB, Faktur)",
+    kondisi_mesin="Sangat Baik",
+    merk="Yamaha",
+    model="NMAX 155",
+    harga=32000000,
+    cc=155,
+    warna="hitam"
+)
+
+# Memanggil method yang menggunakan Instance Variable
+motor1.tampilkan_info()
+motor2.tampilkan_info()
